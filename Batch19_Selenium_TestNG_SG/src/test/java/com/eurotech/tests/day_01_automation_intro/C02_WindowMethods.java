@@ -19,11 +19,10 @@ public class C02_WindowMethods {
        // driver.manage().window().fullscreen();
 
         //window'un position alma
-
         Point position = driver.manage().window().getPosition();
         System.out.println("position = " + position);
 
-        //window#un position ayarlama (set)
+        //window'un position ayarlama (set)
         driver.manage().window().setPosition(new Point(500,350));
 
         Point position1 = driver.manage().window().getPosition();

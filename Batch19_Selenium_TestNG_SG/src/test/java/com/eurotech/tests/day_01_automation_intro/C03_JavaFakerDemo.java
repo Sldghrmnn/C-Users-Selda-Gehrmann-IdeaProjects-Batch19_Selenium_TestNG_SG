@@ -32,7 +32,7 @@ public class C03_JavaFakerDemo {
         System.out.println("password = " + password);
 
         //password - istenilen ozelliklerde
-        String password1 = faker.internet().password(8, 16, true);
+        String password1 = faker.internet().password(8, 16, true,true,true);
         System.out.println("password1 = " + password1);
 
 

@@ -1,0 +1,19 @@
+parent to child
+/child::tagname
+/tagname
+
+child to parent
+/parent::tagname
+/..
+
+sonraki kardes
+/following-sibling::tagname
+
+onceki kardes
+/preceding-sibling::tagname
+
+Grandparent den  child
+/descendant::tagname
+
+Child den Grandparent e
+/ancestor::tagname

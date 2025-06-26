@@ -29,10 +29,10 @@ public class C01_NavigationDemo {
         Thread.sleep(2000);
 
         //then navigate to https://testrelic.com/
-        driver.get(" https://testrelic.com/");
+        driver.get(" https://testrelic.com/"); //siteyi ilk defa acacaksam get methoduyla acarim
 
        // then navigate back -geri gelin
-        driver.navigate().back();
+        driver.navigate().back();  // nevigate ile get ile ilkdefa gidip kesfettigim coklu sayfasi olan siteyi caigirirz.
         Thread.sleep(2000);
         //        * then navigate forward- ileri gelin
         driver.navigate().forward();
