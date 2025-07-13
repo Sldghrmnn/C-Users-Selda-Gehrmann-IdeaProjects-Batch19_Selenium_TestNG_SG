@@ -37,6 +37,7 @@ public class C07_RelativeXPath {
         sportCheckBox.click();
         Thread.sleep(2000);
 
+        // ancestor ilgili locator ın ataları içinde isteneni arar !!!
         WebElement studentRegistForm = driver.findElement(By.xpath("//label[text()='Select picture']/ancestor::form/preceding-sibling::h5"));
         String studentRegistFormText = studentRegistForm.getText();
         System.out.println(studentRegistFormText);

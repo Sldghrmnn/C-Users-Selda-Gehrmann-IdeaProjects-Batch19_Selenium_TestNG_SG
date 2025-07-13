@@ -1,0 +1,34 @@
+Framework  : dosyalarinizi,classlariniz,kütüphanelerinizi,cesitli toollarinizi yonemtnenizi saglayan cerceve bir yapidir.
+            +packege
+            *class
+            *resources
+            *dependencies
+
+            -easy to use      --> kullanim basitligi
+            -code usability   --> kod kullanilabilirligi
+            -code naintanence --> kod bakimini#
+            -reusablity ----  --> tekrar kullanabilirlik
+            -easy to understand
+            -easy to scale --  --> ölceklendirme kolayligi(hangi class nereleri etkiler)
+            -report     ------ -->  QA icin en önnemli yapi
+
+
+  -resuablity
+       *getDriver() method always waants browser name
+       *creat configuration.properties in main package as properties file
+           - text,json,xml,csv,properties vb. (üzerine veri tutan yapilar)
+       *configuration,properties store data in key/value format
+       *then we need to a reader class for this values (configurationReader)
+       +then we import to where it needs to be
+
+
+  Singleton Design Pattern
+         Singleton design pattern : defines a class that has only one instance and provides a global point of access to it.
+
+         Advantage of singleton design pattern : Saves memory because object is not created at each request. Only single instance is reused again and again.
+
+         Usage of singleton design pattern : It is mostly used in multi-threaded (paralel test) and database application.
+                               In configuration settings etc.
+                               thread= run time
+
+         Singleton design let us use the same version of an object across to whole problem

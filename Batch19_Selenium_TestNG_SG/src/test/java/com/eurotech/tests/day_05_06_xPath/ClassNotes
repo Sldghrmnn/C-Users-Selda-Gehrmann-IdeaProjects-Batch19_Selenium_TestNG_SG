@@ -1,19 +1,19 @@
 parent to child
-/child::tagname
-/tagname
+         /child::tagname
+         /tagname
 
 child to parent
-/parent::tagname
-/..
+         /parent::tagname
+         /..
 
 sonraki kardes
-/following-sibling::tagname
+        /following-sibling::tagname
 
 onceki kardes
-/preceding-sibling::tagname
+        /preceding-sibling::tagname
 
 Grandparent den  child
-/descendant::tagname
+        /descendant::tagname
 
 Child den Grandparent e
-/ancestor::tagname
+           /ancestor::tagname
