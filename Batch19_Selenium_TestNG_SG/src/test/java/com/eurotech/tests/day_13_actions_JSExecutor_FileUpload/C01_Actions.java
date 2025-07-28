@@ -62,7 +62,7 @@ public class C01_Actions {
 
     }
     @Test
-    public void hoverOver_Task(){
+    public void hoverOver_Task() throws InterruptedException {
         /**
          * go to https://the-internet.herokuapp.com/hovers
          * locate all users (image on the page) with findElements()
@@ -70,7 +70,17 @@ public class C01_Actions {
          * if any time issues solve them with implicitly or explicitly waits
          */
         driver.get("https://the-internet.herokuapp.com/hovers");
+        for (int i = 2; i <= 4; i++) {
+            String imgXPath = "(//img)[" + i + "]";
+            WebElement img = driver.findElement(By.xpath(imgXPath));
 
+            actions.moveToElement(img).perform();
+
+            String userText = "//h5[text()='name: user" + (i - 1) + "']";
+            WebElement user = driver.findElement(By.xpath(userText));
+
+            Assert.assertTrue(new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(user)).isDisplayed());
+        }
     }
     @Test
     public void dragAndDrop(){
@@ -105,6 +115,20 @@ public class C01_Actions {
          * take "Drag me" and drop it "Drop here" section
          * verify that the "Dropped!" message is displayed (make text verification)
          */
+        driver.get("https://demoqa.com/droppable");
+
+        WebElement source = driver.findElement(By.id("draggable"));
+        WebElement target = driver.findElement(By.xpath("(//div[@id='droppable'])[1]"));
+
+        Actions actions = new Actions(driver);
+
+        actions.dragAndDrop(source, target).perform();
+
+        WebElement verifyMessage = driver.findElement(By.xpath("//p[text()='Dropped!']"));
+        System.out.println("verifyMessage.getText() = " + verifyMessage.getText());
+
+        Assert.assertTrue(verifyMessage.isDisplayed());
+        Assert.assertEquals(verifyMessage.getText(), "Dropped!", "Verify that element has dropped");
     }
 
     @Test
@@ -131,7 +155,7 @@ public class C01_Actions {
         actions.moveToElement(clicker).click().perform();
     }
     @Test
-    public void rightClick() throws InterruptedException {
+    public void rightClick()throws InterruptedException {
         /**  CLASS TASK
          * navigate to https://skill-test.net/right-click-test
          * make right click to the Start box and wait three seconds
