@@ -8,13 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 public class DashboardPage extends BasePage {
 
 
-   // public DashboardPage(){
-    //    PageFactory.initElements(Driver.get(),this);
-    //}
+   // public DashboardPage(){PageFactory.initElements(Driver.get(),this);}
 
 
     @FindBy(xpath = "//h2")
     public WebElement userName;
+
+    @FindBy(css=".breadcrumb>li:nth-of-type(2)")
+    public WebElement pageTitleLeftTop;
 
 
 
