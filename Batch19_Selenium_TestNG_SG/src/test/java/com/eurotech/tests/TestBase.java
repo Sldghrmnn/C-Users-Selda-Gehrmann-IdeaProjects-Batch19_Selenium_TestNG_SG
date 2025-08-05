@@ -25,7 +25,7 @@ public class TestBase {
    protected WebDriver driver; // access modifies Default olduğu için extend edildiğinde diğer class larda görülmez. Ondal dolayı protected olarak değiştirdik
    protected  WebDriverWait wait;
    protected Actions actions;
-   protected ExtentReports report;
+   protected static ExtentReports report;
    protected ExtentHtmlReporter htmlReporter;
    protected ExtentTest extentLogger;
 
